@@ -1,0 +1,133 @@
+Question 2. b)
+
+Please add your run log along with commands to below in this file.
+===================================================================
+hadoop@hadoop:~/question-2$ start-all.sh 
+Warning: $HADOOP_HOME is deprecated.
+
+starting namenode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-namenode-hadoop.out
+localhost: starting datanode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-datanode-hadoop.out
+localhost: starting secondarynamenode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-secondarynamenode-hadoop.out
+starting jobtracker, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-jobtracker-hadoop.out
+localhost: starting tasktracker, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-tasktracker-hadoop.out
+
+hadoop@hadoop:~/question-2$ javac -classpath /home/hadoop/hadoop-1.2.1/hadoop-core-1.2.1.jar:/home/hadoop/hadoop-1.2.1/lib/commons-cli-1.2.jar -d query_author_classes QueryAuthor.java query_author_classes/org/json/*.java 
+Note: query_author_classes/org/json/JSONObject.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+hadoop@hadoop:~/question-2$ jar -cvf queryauthor.jar -C query_author_classes/ .
+added manifest
+adding: org/(in = 0) (out= 0)(stored 0%)
+adding: org/hwone/(in = 0) (out= 0)(stored 0%)
+adding: org/hwone/QueryAuthor$Combine.class(in = 1722) (out= 769)(deflated 55%)
+adding: org/hwone/QueryAuthor$Reduce.class(in = 2173) (out= 959)(deflated 55%)
+adding: org/hwone/QueryAuthor$Map.class(in = 2630) (out= 1136)(deflated 56%)
+adding: org/hwone/QueryAuthor.class(in = 2371) (out= 1196)(deflated 49%)
+adding: org/json/(in = 0) (out= 0)(stored 0%)
+adding: org/json/JSONArray.java(in = 32193) (out= 5694)(deflated 82%)
+adding: org/json/JSONObject.class(in = 18285) (out= 9126)(deflated 50%)
+adding: org/json/Cookie.java(in = 6535) (out= 2315)(deflated 64%)
+adding: org/json/JSONException.java(in = 1066) (out= 436)(deflated 59%)
+adding: org/json/JSONException.class(in = 594) (out= 365)(deflated 38%)
+adding: org/json/README(in = 2381) (out= 921)(deflated 61%)
+adding: org/json/HTTPTokener.java(in = 2423) (out= 1128)(deflated 53%)
+adding: org/json/JSONObject$Null.class(in = 656) (out= 376)(deflated 42%)
+adding: org/json/Cookie.class(in = 2678) (out= 1526)(deflated 43%)
+adding: org/json/JSONML.class(in = 5682) (out= 3006)(deflated 47%)
+adding: org/json/JSONObject$1.class(in = 199) (out= 154)(deflated 22%)
+adding: org/json/JSONString.class(in = 156) (out= 120)(deflated 23%)
+adding: org/json/CDL.java(in = 9905) (out= 2613)(deflated 73%)
+adding: org/json/XML.class(in = 6521) (out= 3586)(deflated 45%)
+adding: org/json/CDL.class(in = 3644) (out= 1868)(deflated 48%)
+adding: org/json/zip/(in = 0) (out= 0)(stored 0%)
+adding: org/json/zip/Keep.java(in = 5964) (out= 2146)(deflated 64%)
+adding: org/json/zip/README(in = 94) (out= 79)(deflated 15%)
+adding: org/json/zip/JSONzip.java(in = 7352) (out= 2412)(deflated 67%)
+adding: org/json/zip/Zipper.java(in = 14214) (out= 3705)(deflated 73%)
+adding: org/json/zip/None.java(in = 398) (out= 240)(deflated 39%)
+adding: org/json/zip/Huff.java(in = 12318) (out= 3430)(deflated 72%)
+adding: org/json/zip/PostMortem.java(in = 1945) (out= 1042)(deflated 46%)
+adding: org/json/zip/BitReader.java(in = 1043) (out= 408)(deflated 60%)
+adding: org/json/zip/Unzipper.java(in = 9298) (out= 2669)(deflated 71%)
+adding: org/json/zip/BitOutputStream.java(in = 4312) (out= 1630)(deflated 62%)
+adding: org/json/zip/BitInputStream.java(in = 4508) (out= 1697)(deflated 62%)
+adding: org/json/zip/BitWriter.java(in = 1094) (out= 420)(deflated 61%)
+adding: org/json/XMLTokener.class(in = 4109) (out= 2327)(deflated 43%)
+adding: org/json/HTTP.java(in = 5930) (out= 1986)(deflated 66%)
+adding: org/json/Kim.java(in = 12815) (out= 3852)(deflated 69%)
+adding: org/json/JSONString.java(in = 708) (out= 333)(deflated 52%)
+adding: org/json/HTTP.class(in = 2180) (out= 1229)(deflated 43%)
+adding: org/json/JSONStringer.class(in = 514) (out= 337)(deflated 34%)
+adding: org/json/Kim.class(in = 3360) (out= 1961)(deflated 41%)
+adding: org/json/CookieList.class(in = 1575) (out= 845)(deflated 46%)
+adding: org/json/HTTPTokener.class(in = 893) (out= 578)(deflated 35%)
+adding: org/json/JSONML.java(in = 17154) (out= 3429)(deflated 80%)
+adding: org/json/JSONObject.java(in = 57494) (out= 11039)(deflated 80%)
+adding: org/json/Property.class(in = 1299) (out= 689)(deflated 46%)
+adding: org/json/JSONTokener.java(in = 13002) (out= 3595)(deflated 72%)
+adding: org/json/JSONWriter.class(in = 3515) (out= 1778)(deflated 49%)
+adding: org/json/JSONWriter.java(in = 10678) (out= 2968)(deflated 72%)
+adding: org/json/Property.java(in = 2650) (out= 1148)(deflated 56%)
+adding: org/json/CookieList.java(in = 3315) (out= 1364)(deflated 58%)
+adding: org/json/XML.java(in = 16615) (out= 4133)(deflated 75%)
+adding: org/json/XMLTokener.java(in = 10657) (out= 3016)(deflated 71%)
+adding: org/json/JSONArray.class(in = 9722) (out= 4321)(deflated 55%)
+adding: org/json/JSONStringer.java(in = 3266) (out= 1534)(deflated 53%)
+adding: org/json/JSONTokener.class(in = 4962) (out= 2787)(deflated 43%)
+
+
+hadoop@hadoop:~/question-2$ hadoop jar queryauthor.jar org.hwone.QueryAuthor input output-b J. K. Rowling
+Warning: $HADOOP_HOME is deprecated.
+
+14/11/10 08:44:05 INFO input.FileInputFormat: Total input paths to process : 1
+14/11/10 08:44:05 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/11/10 08:44:05 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/11/10 08:44:07 INFO mapred.JobClient: Running job: job_201411100543_0006
+14/11/10 08:44:08 INFO mapred.JobClient:  map 0% reduce 0%
+14/11/10 08:46:14 INFO mapred.JobClient:  map 5% reduce 0%
+14/11/10 08:46:18 INFO mapred.JobClient:  map 39% reduce 0%
+14/11/10 08:46:22 INFO mapred.JobClient:  map 90% reduce 0%
+14/11/10 08:46:23 INFO mapred.JobClient:  map 100% reduce 0%
+14/11/10 08:47:29 INFO mapred.JobClient:  map 100% reduce 100%
+14/11/10 08:48:25 INFO mapred.JobClient: Job complete: job_201411100543_0006
+14/11/10 08:48:25 INFO mapred.JobClient: Counters: 29
+14/11/10 08:48:25 INFO mapred.JobClient:   Job Counters 
+14/11/10 08:48:25 INFO mapred.JobClient:     Launched reduce tasks=1
+14/11/10 08:48:25 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=188064
+14/11/10 08:48:25 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/11/10 08:48:25 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/11/10 08:48:25 INFO mapred.JobClient:     Launched map tasks=1
+14/11/10 08:48:25 INFO mapred.JobClient:     Data-local map tasks=1
+14/11/10 08:48:25 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=66323
+14/11/10 08:48:25 INFO mapred.JobClient:   File Output Format Counters 
+14/11/10 08:48:25 INFO mapred.JobClient:     Bytes Written=1515
+14/11/10 08:48:25 INFO mapred.JobClient:   FileSystemCounters
+14/11/10 08:48:25 INFO mapred.JobClient:     FILE_BYTES_READ=1624
+14/11/10 08:48:25 INFO mapred.JobClient:     HDFS_BYTES_READ=12121912
+14/11/10 08:48:25 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=117781
+14/11/10 08:48:25 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=1515
+14/11/10 08:48:25 INFO mapred.JobClient:   File Input Format Counters 
+14/11/10 08:48:25 INFO mapred.JobClient:     Bytes Read=12121786
+14/11/10 08:48:25 INFO mapred.JobClient:   Map-Reduce Framework
+14/11/10 08:48:25 INFO mapred.JobClient:     Map output materialized bytes=1624
+14/11/10 08:48:25 INFO mapred.JobClient:     Map input records=146616
+14/11/10 08:48:25 INFO mapred.JobClient:     Reduce shuffle bytes=1624
+14/11/10 08:48:25 INFO mapred.JobClient:     Spilled Records=56
+14/11/10 08:48:25 INFO mapred.JobClient:     Map output bytes=1562
+14/11/10 08:48:25 INFO mapred.JobClient:     Total committed heap usage (bytes)=213843968
+14/11/10 08:48:25 INFO mapred.JobClient:     CPU time spent (ms)=16390
+14/11/10 08:48:25 INFO mapred.JobClient:     Combine input records=28
+14/11/10 08:48:25 INFO mapred.JobClient:     SPLIT_RAW_BYTES=126
+14/11/10 08:48:25 INFO mapred.JobClient:     Reduce input records=28
+14/11/10 08:48:25 INFO mapred.JobClient:     Reduce input groups=1
+14/11/10 08:48:25 INFO mapred.JobClient:     Combine output records=28
+14/11/10 08:48:25 INFO mapred.JobClient:     Physical memory (bytes) snapshot=252235776
+14/11/10 08:48:25 INFO mapred.JobClient:     Reduce output records=1
+14/11/10 08:48:25 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=772915200
+14/11/10 08:48:25 INFO mapred.JobClient:     Map output records=28
+hadoop@hadoop:~/question-2$ hadoop fs -cat output-b/part-r-00000 
+Warning: $HADOOP_HOME is deprecated.
+
+{"author":"J. K. Rowling","books":[{"book":"Harry Potter a vězeň z Azkabanu"},{"book":"Harry Potter and the Goblet of Fire"},{"book":"Garri Potter i filosofskiĭ kamenʹ"},{"book":"Harry Potter i l'orde del fènix"},{"book":"Harry Potter 2 und die Kammer des Schreckens. Meine Freunde. Ausgabe Illustration"},{"book":"Harry Potter und der Orden des Phónix"},{"book":"Garri Potter i kubok ognya"},{"book":"Harri Potter Maen Yr Athronydd"},{"book":"Harry Potter und der Stein der Weisen.  Bd. 1.  9 CDs"},{"book":"Harrī Poṭṭur aur pāras pathar"},{"book":"Harry Potter and the Half-Blood Prince"},{"book":"Harry Potter and the Order of the Phoenix"},{"book":"Hali Bote yu mi shi"},{"book":"Hari Poṭer ṿe-even ha-ḥakhamim"},{"book":"Harry Potter i więzień Azkabanu"},{"book":"Harry Potter and the Half-Blood Prince"},{"book":"Hari Patter va Sang-i Jādū"},{"book":"Harry Potter y La Camara Secreta (Harry Potter and the Chamber of Secrets)"},{"book":"Una vacante imprevista"},{"book":"Garri Potter i taĭnai︠a︡ komnata"},{"book":"Harry Potter & chirec croc lyua"},{"book":"[Areios Poter kai he tou philosophos lithos]"},{"book":"Harry Potter i komnata tajemnic"},{"book":"Harry Potter und der Orden des Phónix"},{"book":"Harri Potter i filosofsʹkyĭ kaminʹ"},{"book":"Harry Potter a L'ecole Des Sorciers / Harry Potter and the Sorcerer's Stone (Harry Potter (French))"},{"book":"Harry Potter & the Order Phoenix/Coming (Harry Potter)"},{"book":"Hǣri Phō̜ttœ̄ kap hō̜nghǣng khāmlap"}]}
+
+
+

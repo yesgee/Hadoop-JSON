@@ -1,0 +1,140 @@
+Question 2. a)
+
+Please add your run log along with commands to below in this file.
+===================================================================
+
+hadoop@hadoop:~/question-2$ start-all.sh 
+Warning: $HADOOP_HOME is deprecated.
+
+starting namenode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-namenode-hadoop.out
+localhost: starting datanode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-datanode-hadoop.out
+localhost: starting secondarynamenode, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-secondarynamenode-hadoop.out
+starting jobtracker, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-jobtracker-hadoop.out
+localhost: starting tasktracker, logging to /home/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hadoop-tasktracker-hadoop.out
+
+hadoop@hadoop:~/question-2$ javac -classpath /home/hadoop/hadoop-1.2.1/hadoop-core-1.2.1.jar:/home/hadoop/hadoop-1.2.1/lib/commons-cli-1.2.jar -d combine_books_classes CombineBooks.java combine_books_classes/org/json/*.java 
+Note: combine_books_classes/org/json/JSONObject.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+hadoop@hadoop:~/question-2$ jar -cvf combinebooks.jar -C combine_books_classes/ .
+added manifest
+adding: CombineBooks$Reduce.class(in = 2256) (out= 1016)(deflated 54%)
+adding: CombineBooks$Map.class(in = 1884) (out= 815)(deflated 56%)
+adding: CombineBooks$Combine.class(in = 1877) (out= 814)(deflated 56%)
+adding: org/(in = 0) (out= 0)(stored 0%)
+adding: org/hwone/(in = 0) (out= 0)(stored 0%)
+adding: org/hwone/CombineBooks$Reduce.class(in = 2176) (out= 963)(deflated 55%)
+adding: org/hwone/CombineBooks$Map.class(in = 1904) (out= 822)(deflated 56%)
+adding: org/hwone/CombineBooks$Combine.class(in = 1725) (out= 766)(deflated 55%)
+adding: org/hwone/CombineBooks.class(in = 1932) (out= 981)(deflated 49%)
+adding: org/json/(in = 0) (out= 0)(stored 0%)
+adding: org/json/JSONArray.java(in = 32193) (out= 5694)(deflated 82%)
+adding: org/json/JSONObject.class(in = 18285) (out= 9126)(deflated 50%)
+adding: org/json/Cookie.java(in = 6535) (out= 2315)(deflated 64%)
+adding: org/json/JSONException.java(in = 1066) (out= 436)(deflated 59%)
+adding: org/json/JSONException.class(in = 594) (out= 365)(deflated 38%)
+adding: org/json/README(in = 2381) (out= 921)(deflated 61%)
+adding: org/json/HTTPTokener.java(in = 2423) (out= 1128)(deflated 53%)
+adding: org/json/JSONObject$Null.class(in = 656) (out= 376)(deflated 42%)
+adding: org/json/Cookie.class(in = 2678) (out= 1526)(deflated 43%)
+adding: org/json/JSONML.class(in = 5682) (out= 3006)(deflated 47%)
+adding: org/json/JSONObject$1.class(in = 199) (out= 154)(deflated 22%)
+adding: org/json/JSONString.class(in = 156) (out= 120)(deflated 23%)
+adding: org/json/CDL.java(in = 9905) (out= 2613)(deflated 73%)
+adding: org/json/XML.class(in = 6521) (out= 3586)(deflated 45%)
+adding: org/json/CDL.class(in = 3644) (out= 1868)(deflated 48%)
+adding: org/json/zip/(in = 0) (out= 0)(stored 0%)
+adding: org/json/zip/Keep.java(in = 5964) (out= 2146)(deflated 64%)
+adding: org/json/zip/README(in = 94) (out= 79)(deflated 15%)
+adding: org/json/zip/JSONzip.java(in = 7352) (out= 2412)(deflated 67%)
+adding: org/json/zip/Zipper.java(in = 14214) (out= 3705)(deflated 73%)
+adding: org/json/zip/None.java(in = 398) (out= 240)(deflated 39%)
+adding: org/json/zip/Huff.java(in = 12318) (out= 3430)(deflated 72%)
+adding: org/json/zip/PostMortem.java(in = 1945) (out= 1042)(deflated 46%)
+adding: org/json/zip/BitReader.java(in = 1043) (out= 408)(deflated 60%)
+adding: org/json/zip/Unzipper.java(in = 9298) (out= 2669)(deflated 71%)
+adding: org/json/zip/BitOutputStream.java(in = 4312) (out= 1630)(deflated 62%)
+adding: org/json/zip/BitInputStream.java(in = 4508) (out= 1697)(deflated 62%)
+adding: org/json/zip/BitWriter.java(in = 1094) (out= 420)(deflated 61%)
+adding: org/json/XMLTokener.class(in = 4109) (out= 2327)(deflated 43%)
+adding: org/json/HTTP.java(in = 5930) (out= 1986)(deflated 66%)
+adding: org/json/Kim.java(in = 12815) (out= 3852)(deflated 69%)
+adding: org/json/JSONString.java(in = 708) (out= 333)(deflated 52%)
+adding: org/json/HTTP.class(in = 2180) (out= 1229)(deflated 43%)
+adding: org/json/JSONStringer.class(in = 514) (out= 337)(deflated 34%)
+adding: org/json/Kim.class(in = 3360) (out= 1961)(deflated 41%)
+adding: org/json/CookieList.class(in = 1575) (out= 845)(deflated 46%)
+adding: org/json/json/(in = 0) (out= 0)(stored 0%)
+adding: org/json/HTTPTokener.class(in = 893) (out= 578)(deflated 35%)
+adding: org/json/JSONML.java(in = 17154) (out= 3429)(deflated 80%)
+adding: org/json/JSONObject.java(in = 57494) (out= 11039)(deflated 80%)
+adding: org/json/Property.class(in = 1299) (out= 689)(deflated 46%)
+adding: org/json/JSONTokener.java(in = 13002) (out= 3595)(deflated 72%)
+adding: org/json/JSONWriter.class(in = 3515) (out= 1778)(deflated 49%)
+adding: org/json/JSONWriter.java(in = 10678) (out= 2968)(deflated 72%)
+adding: org/json/Property.java(in = 2650) (out= 1148)(deflated 56%)
+adding: org/json/CookieList.java(in = 3315) (out= 1364)(deflated 58%)
+adding: org/json/XML.java(in = 16615) (out= 4133)(deflated 75%)
+adding: org/json/XMLTokener.java(in = 10657) (out= 3016)(deflated 71%)
+adding: org/json/JSONArray.class(in = 9722) (out= 4321)(deflated 55%)
+adding: org/json/JSONStringer.java(in = 3266) (out= 1534)(deflated 53%)
+adding: org/json/JSONTokener.class(in = 4962) (out= 2787)(deflated 43%)
+adding: CombineBooks.class(in = 1833) (out= 993)(deflated 45%)
+
+hadoop@hadoop:~/question-2$ hadoop jar combinebooks.jar org.hwone.CombineBooks input output-a
+Warning: $HADOOP_HOME is deprecated.
+
+14/11/10 05:52:46 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/11/10 05:52:46 INFO input.FileInputFormat: Total input paths to process : 1
+14/11/10 05:52:47 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/11/10 05:52:47 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/11/10 05:52:49 INFO mapred.JobClient: Running job: job_201411100543_0001
+14/11/10 05:52:50 INFO mapred.JobClient:  map 0% reduce 0%
+14/11/10 05:54:52 INFO mapred.JobClient:  map 10% reduce 0%
+14/11/10 05:54:55 INFO mapred.JobClient:  map 42% reduce 0%
+14/11/10 05:54:58 INFO mapred.JobClient:  map 100% reduce 0%
+14/11/10 05:56:11 INFO mapred.JobClient:  map 100% reduce 78%
+14/11/10 05:56:16 INFO mapred.JobClient:  map 100% reduce 94%
+14/11/10 05:56:18 INFO mapred.JobClient:  map 100% reduce 100%
+14/11/10 05:57:13 INFO mapred.JobClient: Job complete: job_201411100543_0001
+14/11/10 05:57:13 INFO mapred.JobClient: Counters: 29
+14/11/10 05:57:13 INFO mapred.JobClient:   Job Counters 
+14/11/10 05:57:13 INFO mapred.JobClient:     Launched reduce tasks=1
+14/11/10 05:57:13 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=180792
+14/11/10 05:57:14 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/11/10 05:57:14 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/11/10 05:57:14 INFO mapred.JobClient:     Launched map tasks=1
+14/11/10 05:57:14 INFO mapred.JobClient:     Data-local map tasks=1
+14/11/10 05:57:14 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=77628
+14/11/10 05:57:14 INFO mapred.JobClient:   File Output Format Counters 
+14/11/10 05:57:14 INFO mapred.JobClient:     Bytes Written=12217781
+14/11/10 05:57:14 INFO mapred.JobClient:   FileSystemCounters
+14/11/10 05:57:14 INFO mapred.JobClient:     FILE_BYTES_READ=9193604
+14/11/10 05:57:14 INFO mapred.JobClient:     HDFS_BYTES_READ=12121912
+14/11/10 05:57:14 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=18499977
+14/11/10 05:57:14 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12217781
+14/11/10 05:57:14 INFO mapred.JobClient:   File Input Format Counters 
+14/11/10 05:57:14 INFO mapred.JobClient:     Bytes Read=12121786
+14/11/10 05:57:14 INFO mapred.JobClient:   Map-Reduce Framework
+14/11/10 05:57:14 INFO mapred.JobClient:     Map output materialized bytes=9193604
+14/11/10 05:57:14 INFO mapred.JobClient:     Map input records=146616
+14/11/10 05:57:14 INFO mapred.JobClient:     Reduce shuffle bytes=9193604
+14/11/10 05:57:14 INFO mapred.JobClient:     Spilled Records=293232
+14/11/10 05:57:14 INFO mapred.JobClient:     Map output bytes=8896580
+14/11/10 05:57:14 INFO mapred.JobClient:     Total committed heap usage (bytes)=223105024
+14/11/10 05:57:14 INFO mapred.JobClient:     CPU time spent (ms)=18560
+14/11/10 05:57:14 INFO mapred.JobClient:     Combine input records=146616
+14/11/10 05:57:14 INFO mapred.JobClient:     SPLIT_RAW_BYTES=126
+14/11/10 05:57:14 INFO mapred.JobClient:     Reduce input records=146616
+14/11/10 05:57:14 INFO mapred.JobClient:     Reduce input groups=109698
+14/11/10 05:57:14 INFO mapred.JobClient:     Combine output records=146616
+14/11/10 05:57:14 INFO mapred.JobClient:     Physical memory (bytes) snapshot=263335936
+14/11/10 05:57:14 INFO mapred.JobClient:     Reduce output records=109698
+14/11/10 05:57:14 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=773050368
+14/11/10 05:57:14 INFO mapred.JobClient:     Map output records=146616
+hadoop@hadoop:~/question-2$ hadoop fs -copyToLocal output-a output-a
+
+
+
+
+

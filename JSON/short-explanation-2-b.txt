@@ -1,0 +1,30 @@
+Question 2. b)
+
+Please add your 6-10 sentence explanation to below in this file.
+=================================================================
+
+This mapreduce program uses 3rd party json classes (downloaded from github ) and hence the jar of json classes and this map reduce code need to be compiled together to avoid missing dependencies
+
+The program takes input folder, output folder and author name to be queried as inputs.The author name can contain from just first name till 4 parts (first name, middle name, last name, suffix)
+
+Input:
+
+The input file author-book-tuple.txt is placed in hdfs input folder. 
+
+Mapper:
+
+The Mapper tokenizes the json records as author and book variables. The punctuation characters like comma, dot are removed from the names entered as well as read from the input text and then compared. The author name entered by the user is compared with each value of JSON Object and only those <key,value> pairs are written to output. Mapper writes author as key and book as value to Combiner. 
+
+Combiner:
+
+The combiner adds books of same author (key) into one variable and returns author as key and list of books as value to Reducer
+
+Reducer:
+
+The reducer combines the author which is the key and list of books which is the values as one JSON object of the following format
+
+{"author": "Tobias Wells", "books":[{"book":"A die in the country"},{"book": "Dinky died"}]}
+
+
+Output:
+Output for a sample name is in output-b folder. Output for the input author name J.K.Rowling is in J.K.Rowling-output-b folder
